@@ -54,12 +54,14 @@ class TiketController extends Controller
         $handled_by = $request->handled_by;
         $sender = $request->sender;
 
+
         $tikets->group_name = $group_name;
         $tikets->category_id = $category_id;
         $tikets->status = $status;
         $tikets->details = $details;
         $tikets->handled_by = $handled_by;
         $tikets->sender = $sender;
+
         $data = $tikets->save();
         if ($data) {
             session()->flash('success', 'Report updated successfully');

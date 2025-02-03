@@ -67,7 +67,7 @@
                                         <td class="align-middle">{{ $tiket->handledBy->name ?? '-' }}</td>
                                         <td class="align-middle">{{ $tiket->sender }}</td>
                                         <td class="align-middle">{{ $tiket->created_at }}</td>
-                                        <td class="align-middle">{{ $tiket->created_at }}</td>
+                                        <td class="align-middle">{{ $tiket->updated_at }}</td>
                                         <td class="align-middle">
                                             <div class="btn-group" role="group" aria-label="Basic example">
                                                 <a href="{{ route('admin/tikets/edit', ['id' => $tiket->id]) }}"

@@ -66,8 +66,6 @@
                                     placeholder="Sender" value="{{ $tiket->sender }}">
                             </div>
 
-
-
                             <!-- Submit Button -->
                             <div class="text-center">
                                 <button type="submit"
