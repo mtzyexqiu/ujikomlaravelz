@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Tiket;
 
+
 class TiketController extends Controller
 {
     public function index()
@@ -92,18 +93,16 @@ class TiketController extends Controller
     }
 
     public function search(Request $request)
-{
-    $query = Tiket::query();
+    {
+        $query = Tiket::query();
 
 
-    if ($request->filled('group_name')) {
-        $query->where('group_name', $request->group_name);
+        if ($request->filled('group_name')) {
+            $query->where('group_name', $request->group_name);
+        }
+
+        $tikets = $query->get();
+
+        return view('dashboard', compact('tikets'));
     }
-
-    $tikets = $query->get();
-
-    return view('dashboard', compact('tikets'));
 }
-
-}
-

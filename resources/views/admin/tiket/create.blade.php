@@ -5,14 +5,11 @@
         </h2>
     </x-slot>
 
-    
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <h1 class="text-3xl font-bold mb-6 text-center">Update Reporting</h1>
-
+                    <h1 class="text-3xl font-bold mb-6 text-center">Create Reporting</h1> <!-- Added the title here -->
 
                     @if (session()->has('error'))
                         <div class="bg-red-500 text-white p-3 rounded mb-4">
@@ -90,6 +87,7 @@
             </div>
         </div>
     </div>
+
     <style>
         /* Custom Styling for the Form */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -103,11 +101,14 @@
         }
 
         button {
-            transition: background-color 0.3s ease;
+
+            background-color: #157BFF;
         }
 
         button:hover {
-            background-color: #157BFF;
+            transition:  0.3s ease;
+            background-color: #2c6abd
+
         }
     </style>
 </x-app-layout>
