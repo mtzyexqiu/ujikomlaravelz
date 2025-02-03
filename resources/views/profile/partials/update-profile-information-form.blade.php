@@ -47,6 +47,23 @@
             @endif
         </div>
 
+        <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+
+            <div>
+                <label for="profile_picture">Upload Foto Profil</label>
+                <input type="file" name="profile_picture" id="profile_picture" accept="image/*">
+            </div>
+
+            <button type="submit">Simpan Foto Profil</button>
+        </form>
+
+        @if (auth()->user()->profile_picture)
+            <img src="{{ asset('storage/' . auth()->user()->profile_picture) }}" alt="Foto Profil" width="150">
+        @endif
+
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 

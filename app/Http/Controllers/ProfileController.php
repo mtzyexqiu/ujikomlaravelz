@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -24,18 +25,34 @@ class ProfileController extends Controller
     /**
      * Update the user's profile information.
      */
-    public function update(ProfileUpdateRequest $request): RedirectResponse
+    public function update(Request $request)
     {
-        $request->user()->fill($request->validated());
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'biodata' => 'nullable|string|max:1000',  // Validasi biodata
+            'profile_picture' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
+        ]);
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        $user = Auth::user(); // Ensure $user is an instance of the User model
+        if (!$user instanceof \App\Models\User) {
+            throw new \Exception('Authenticated user is not an instance of User model');
+        }
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->biodata = $request->biodata;  // Menyimpan biodata
+
+        // Menyimpan foto profil jika ada
+        if ($request->hasFile('profile_picture')) {
+            $user->profile_picture = $request->file('profile_picture')->store('profile_pictures', 'public');
         }
 
-        $request->user()->save();
+        $user->save();
 
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        return redirect()->route('profile.edit')->with('success', 'Profile updated successfully.');
     }
+
+
 
     /**
      * Delete the user's account.
