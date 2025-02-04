@@ -13,7 +13,7 @@
                     <!-- Search and Create Reporting Buttons -->
                     <div class="flex justify-between items-center mb-4">
                         <a href="{{ route('admin/tikets/create') }}" class="btn btn-primary text-white"
-                            style="background-color: #007bff; border-color: #007bff; padding: 10px 20px; font-size: 1rem; border-radius: 10px;">Create
+                            style="background-color: #007bff; border-color: #007bff; padding: 10px 20px; font-size: 1rem; border-radius: 10px; font-family: 'Poppins', sans-serif;">Create
                             Reporting</a>
 
                         <form action="{{ route('tiket.search') }}" method="GET">
@@ -49,10 +49,10 @@
                                     <th>Category</th>
                                     <th>Status</th>
                                     <th>Details</th>
-                                    <th>Handled By</th>
+                                    <th>Handled_By</th>
                                     <th>Sender</th>
-                                    <th>Created At</th>
-                                    <th>Updated At</th>
+                                    <th>Created_At</th>
+                                    <th>Updated_At</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -121,7 +121,7 @@
         .custom-table th,
         .custom-table td {
             font-size: 1rem;
-            padding: 12px;
+            padding: 18px;
         }
     </style>
 </x-app-layout>

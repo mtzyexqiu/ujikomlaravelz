@@ -44,14 +44,14 @@
                             <thead style="background-color: #007bff; color: white;">
                                 <tr>
                                     <th>ID</th>
-                                    <th>Group_Name</th>
+                                    <th>Group Name</th>
+                                    <th>Category</th>
                                     <th>Status</th>
                                     <th>Details</th>
-                                    <th>Handle_By</th>
-                                    <th>Created_at</th>
-                                    <th>Update_at</th>
+                                    <th>Handled_By</th>
                                     <th>Sender</th>
-                                    <th>Category ID</th>
+                                    <th>Created_At</th>
+                                    <th>Updated_At</th>
                                     <th></th>
                                 </tr>
                             </thead>

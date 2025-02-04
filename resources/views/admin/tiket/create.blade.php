@@ -1,15 +1,10 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Add Reporting') }}
-        </h2>
-    </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <h1 class="text-3xl font-bold mb-6 text-center">Create Reporting</h1> <!-- Added the title here -->
+                    <h1 class="text-3xl font-bold mb-6 text-center" style="color: #157BFF; font-weight: bold;">CREATE REPORTING</h1>
 
                     @if (session()->has('error'))
                         <div class="bg-red-500 text-white p-3 rounded mb-4">
@@ -107,7 +102,7 @@
 
         button:hover {
             transition:  0.3s ease;
-            background-color: #2c6abd
+            background-color: #6aaaff
 
         }
     </style>

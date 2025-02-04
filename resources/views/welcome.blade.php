@@ -62,10 +62,7 @@
             gap: 10px;
         }
 
-        .btn-login {
-            background-color: white;
-            color: #157BFF;
-            border: 2px solid #157BFF;
+        .btn-login, .btn-register, .btn-dashboard {
             padding: 10px 20px;
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
@@ -74,6 +71,12 @@
             border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
+        }
+
+        .btn-login {
+            background-color: white;
+            color: #157BFF;
+            border: 2px solid #157BFF;
             box-shadow: 0 6px 20px rgba(21, 123, 255, 0.3);
         }
 
@@ -83,55 +86,38 @@
             box-shadow: 0 6px 20px rgba(21, 123, 255, 0.5);
         }
 
-        .btn-login:active {
-            transform: scale(0.95);
-        }
-
         .btn-register {
             background-color: #157BFF;
             color: #ffffff;
             border: 2px solid #157BFF;
-            padding: 10px 20px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
         }
 
         .btn-register:hover {
             background-color: #157BFF;
-            color: #ffffff;
             transform: scale(1.05);
-        }
-
-        .btn-register:active {
-            transform: scale(0.95);
         }
 
         .btn-dashboard {
             background-color: #157BFF;
             color: white;
             border: 2px solid #157BFF;
-            padding: 10px 20px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
         }
 
         .btn-dashboard:hover {
-            background-color: #135a99;
+            background-color: #157BFF;
             box-shadow: 0 6px 20px rgba(21, 123, 255, 0.5);
         }
 
-        .btn-dashboard:active {
-            transform: scale(0.95);
+
+        /* Responsive untuk tampilan mobile */
+        @media (max-width: 768px) {
+            .welcome-text {
+                font-size: 32px;
+            }
+
+            .subtext {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -147,6 +133,8 @@
         <div class="subtext">
             to your own role
         </div>
+
+
     </div>
 
     @if (Route::has('login'))

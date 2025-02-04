@@ -33,9 +33,9 @@
     <div class="flex bg-white rounded-lg shadow-lg w-11/12 max-w-3xl">
         <!-- Left Section -->
         <div class="w-1/2 bg-blue-500 text-white rounded-l-lg flex flex-col items-center justify-center p-8 rounded-tr-3xl rounded-br-3xl">
-            <h2 class="text-3xl font-bold mb-4">Welcome Back!</h2>
-            <p class="text-base">Already have an account?</p>
-            <a href="{{ route('login') }}" class="btn-animate bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 mt-5 text-sm">Login</a>
+            <h2 class="text-4xl font-bold mb-4">Let's Join Us!</h2>
+            <p class="text-lg mb-6">Already have an account?</p>
+            <a href="{{ route('login') }}" class="btn-animate bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100">Login</a>
         </div>
 
         <!-- Right Section -->
@@ -78,7 +78,7 @@
 
                 <!-- Register Button -->
                 <button type="submit"
-                    class="btn-animate w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 text-base">
+                    class="btn-animate w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 text-lg">
                     Register
                 </button>
             </form>
