@@ -13,17 +13,19 @@
                     <div style="text-align: right; margin-bottom: -50px;">
                         <form action="{{ route('tiket.search') }}" method="GET">
                             <!-- Group Name Field -->
-                            <label for="group_name" style="font-weight: bold; font-family: 'Poppins', sans-serif;"></label>
+                            <label for="group_name"
+                                style="font-weight: bold; font-family: 'Poppins', sans-serif;"></label>
                             <input type="text" id="group_name" name="group_name" value="{{ request('group_name') }}"
                                 style="padding: 10px; width: 250px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
                                 placeholder="Enter group name...">
 
                             <!-- Category ID Field -->
-                            <label for="category_id" style="font-weight: bold; font-family: 'Poppins', sans-serif; margin-left: 10px;"></label>
-                            <input type="number" id="category_id" name="category_id" value="{{ request('category_id') }}"
+                            <label for="category_id"
+                                style="font-weight: bold; font-family: 'Poppins', sans-serif; margin-left: 10px;"></label>
+                            <input type="number" id="category_id" name="category_id"
+                                value="{{ request('category_id') }}"
                                 style="padding: 10px; width: 200px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
                                 placeholder="Enter category ID...">
-
 
                             <button type="submit"
                                 style="
@@ -48,43 +50,53 @@
                     </div>
 
                     <div class="table-responsive">
-                        <table class="table table-hover table-bordered text-sm custom-table">
-                            <thead style="background-color: #007bff; color: white;">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Group Name</th>
-                                    <th>Category</th>
-                                    <th>Status</th>
-                                    <th>Details</th>
-                                    <th>Handled_By</th>
-                                    <th>Sender</th>
-                                    <th>Created_At</th>
-                                    <th>Updated_At</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse ($tikets as $tiket)
+                        @if ($tikets->isEmpty())
+                            <div
+                                style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 450px;">
+                                <creattie-embed
+                                    src="https://d1jj76g3lut4fe.cloudfront.net/saved_colors/112755/1NILSercLqMK5rk0.json"
+                                    delay="1" speed="100" frame_rate="24" trigger="loop"
+                                    style="width:350px;background-color: ">
+                                </creattie-embed>
+                                <script src="https://creattie.com/js/embed.js?id=3f6954fde297cd31b441" defer></script>
+                                <p style="font-family: 'Poppins', sans-serif; font-size: 18px; color: #666;">Ups!... no
+                                    results found</p>
+                            </div>
+                        @else
+                            <table class="table table-hover table-bordered text-sm custom-table">
+                                <thead style="background-color: #007bff; color: white;">
                                     <tr>
-                                        <td class="align-middle">{{ $loop->iteration }}</td>
-                                        <td class="align-middle">{{ $tiket->group_name }}</td>
-                                        <td class="align-middle">{{ $tiket->category->category_name ?? '-' }}</td>
-                                        <td class="align-middle">{{ $tiket->status }}</td>
-                                        <td class="align-middle">{{ $tiket->details }}</td>
-                                        <td class="align-middle">{{ $tiket->handledBy->name ?? '-' }}</td>
-                                        <td class="align-middle">{{ $tiket->sender }}</td>
-                                        <td class="align-middle">{{ $tiket->created_at }}</td>
-                                        <td class="align-middle">{{ $tiket->updated_at }}</td>
-                                        <td class="align-middle">
-                                        </td>
+                                        <th>ID</th>
+                                        <th>Group Name</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Details</th>
+                                        <th>Handled_By</th>
+                                        <th>Sender</th>
+                                        <th>Created_At</th>
+                                        <th>Updated_At</th>
+                                        <th></th>
                                     </tr>
-                                @empty
-                                    <tr>
-                                        <td colspan="10" class="text-center">Data not found</td>
-                                    </tr>
-                                @endforelse
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach ($tikets as $tiket)
+                                        <tr>
+                                            <td class="align-middle">{{ $loop->iteration }}</td>
+                                            <td class="align-middle">{{ $tiket->group_name }}</td>
+                                            <td class="align-middle">{{ $tiket->category->category_name ?? '-' }}</td>
+                                            <td class="align-middle">{{ $tiket->status }}</td>
+                                            <td class="align-middle">{{ $tiket->details }}</td>
+                                            <td class="align-middle">{{ $tiket->handledBy->name ?? '-' }}</td>
+                                            <td class="align-middle">{{ $tiket->sender }}</td>
+                                            <td class="align-middle">{{ $tiket->created_at }}</td>
+                                            <td class="align-middle">{{ $tiket->updated_at }}</td>
+                                            <td class="align-middle">
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @endif
                     </div>
 
                 </div>
@@ -102,7 +114,7 @@
             overflow: hidden;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 100%;
-            font-size: 1.25rem; /* Larger font size for better readability */
+            font-size: 1.25rem;
         }
 
         .custom-table th:first-child {
@@ -124,7 +136,7 @@
         .custom-table th,
         .custom-table td {
             font-size: 1rem;
-            padding: 18px; /* Increase padding for better spacing */
+            padding: 18px;
         }
 
         .btn-profile {
