@@ -23,51 +23,51 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
 
 1. Clone repositori yang ada di bawah ( Menggunakan Git Bash ):
    
-   > git clone https://github.com/mtzyexqiu/ujikomlaravelz.git
-   > cd ujikom-laravel-project
+- git clone https://github.com/mtzyexqiu/ujikomlaravelz.git
+- cd ujikom-laravel-project
 
 -----------------------------------------------------------------------------------------------------------------------
 
 2. Install dependencies dengan Composer dan NPM:
 
-   > composer install
-   > npm install && npm run dev
+- composer install
+- npm install && npm run dev
 
 -----------------------------------------------------------------------------------------------------------------------   
 3. Salin file konfigurasi `.env`:
 
-   > cp .env.example .env
+- cp .env.example .env
 
 -----------------------------------------------------------------------------------------------------------------------   
 4. Atur konfigurasi database di file `.env`:
 
-   > DB_DATABASE=ujikomlaravelz
-   > DB_USERNAME=root
-   > DB_PASSWORD=
+- DB_DATABASE=ujikomlaravelz
+- DB_USERNAME=root
+- DB_PASSWORD=
 
 -----------------------------------------------------------------------------------------------------------------------
 
 5. Generate application key:
 
-   > php artisan key:generate
+- php artisan key:generate
 
 -----------------------------------------------------------------------------------------------------------------------
 
 6. Jalankan migrasi dan seeder ( Menggunakan Git bash ):
 
-   > php artisan migrate --seed
+- php artisan migrate --seed
 
 -----------------------------------------------------------------------------------------------------------------------
 
 7. Jalankan Command :
 
-   > php artisan serve
+- php artisan serve
 
 -----------------------------------------------------------------------------------------------------------------------
 
 8. Akses Aplikasi/Website :
 
-   > Lalu akses aplikasi di : `http://localhost:8000`.
+- Lalu akses aplikasi di : `http://localhost:8000`.
 
 -----------------------------------------------------------------------------------------------------------------------
  
