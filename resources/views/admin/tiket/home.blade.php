@@ -16,28 +16,36 @@
                             style="background-color: #007bff; border-color: #007bff; padding: 10px 20px; font-size: 1rem; border-radius: 10px; font-family: 'Poppins', sans-serif;">Create
                             Reporting</a>
 
-                        <form action="{{ route('tiket.search') }}" method="GET">
-                            <label for="group_name" style="font-weight: bold; font-family: 'Poppins', sans-serif;"></label>
-                            <input type="text" id="group_name" name="group_name" value="{{ request('group_name') }}"
-                                style="padding: 10px; width: 250px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
-                                placeholder="Enter group name...">
+                            <form action="{{ route('tiket.search') }}" method="GET">
+                                <!-- Group Name Field -->
+                                <label for="group_name" style="font-weight: bold; font-family: 'Poppins', sans-serif;"></label>
+                                <input type="text" id="group_name" name="group_name" value="{{ request('group_name') }}"
+                                    style="padding: 10px; width: 250px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
+                                    placeholder="Enter group name...">
 
-                            <button type="submit"
-                                style="
-                                    background-color: #007bff;
-                                    color: white;
-                                    padding: 10px 20px;
-                                    border: none;
-                                    border-radius: 10px;
-                                    font-size: 17px;
-                                    cursor: pointer;
-                                    font-family: 'Poppins', sans-serif;
-                                    transition: background-color 0.3s ease;"
-                                onmouseover="this.style.backgroundColor='#0056b3';"
-                                onmouseout="this.style.backgroundColor='#157BFF';">
-                                Find
-                            </button>
-                        </form>
+                                <!-- Category ID Field -->
+                                <label for="category_id" style="font-weight: bold; font-family: 'Poppins', sans-serif; margin-left: 10px;"></label>
+                                <input type="number" id="category_id" name="category_id" value="{{ request('category_id') }}"
+                                    style="padding: 10px; width: 200px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
+                                    placeholder="Enter category ID...">
+
+
+                                <button type="submit"
+                                    style="
+                                        background-color: #007bff;
+                                        color: white;
+                                        padding: 10px 20px;
+                                        border: none;
+                                        border-radius: 10px;
+                                        font-size: 17px;
+                                        cursor: pointer;
+                                        font-family: 'Poppins', sans-serif;
+                                        transition: background-color 0.3s ease;"
+                                    onmouseover="this.style.backgroundColor='#0056b3';"
+                                    onmouseout="this.style.backgroundColor='#157BFF';">
+                                    Find
+                                </button>
+                            </form>
                     </div>
 
                     <div class="table-responsive">

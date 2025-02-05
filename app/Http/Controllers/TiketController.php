@@ -93,16 +93,22 @@ class TiketController extends Controller
     }
 
     public function search(Request $request)
-    {
-        $query = Tiket::query();
+{
+    $query = Tiket::query();
 
-
-        if ($request->filled('group_name')) {
-            $query->where('group_name', $request->group_name);
-        }
-
-        $tikets = $query->get();
-
-        return view('dashboard', compact('tikets'));
+    // Filter berdasarkan group_name
+    if ($request->filled('group_name')) {
+        $query->where('group_name', $request->group_name);
     }
+
+    // Filter berdasarkan category_id
+    if ($request->filled('category_id')) {
+        $query->where('category_id', $request->category_id);
+    }
+
+    $tikets = $query->get();
+
+    return view('dashboard', compact('tikets'));
+}
+
 }

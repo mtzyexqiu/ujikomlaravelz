@@ -12,10 +12,18 @@
 
                     <div style="text-align: right; margin-bottom: -50px;">
                         <form action="{{ route('tiket.search') }}" method="GET">
+                            <!-- Group Name Field -->
                             <label for="group_name" style="font-weight: bold; font-family: 'Poppins', sans-serif;"></label>
                             <input type="text" id="group_name" name="group_name" value="{{ request('group_name') }}"
                                 style="padding: 10px; width: 250px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
                                 placeholder="Enter group name...">
+
+                            <!-- Category ID Field -->
+                            <label for="category_id" style="font-weight: bold; font-family: 'Poppins', sans-serif; margin-left: 10px;"></label>
+                            <input type="number" id="category_id" name="category_id" value="{{ request('category_id') }}"
+                                style="padding: 10px; width: 200px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
+                                placeholder="Enter category ID...">
+
 
                             <button type="submit"
                                 style="
@@ -66,7 +74,7 @@
                                         <td class="align-middle">{{ $tiket->handledBy->name ?? '-' }}</td>
                                         <td class="align-middle">{{ $tiket->sender }}</td>
                                         <td class="align-middle">{{ $tiket->created_at }}</td>
-                                        <td class="align-middle">{{ $tiket->created_at }}</td>
+                                        <td class="align-middle">{{ $tiket->updated_at }}</td>
                                         <td class="align-middle">
                                         </td>
                                     </tr>
