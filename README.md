@@ -66,7 +66,7 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
 -----------------------------------------------------------------------------------------------------------------------
 
 8. Akses Aplikasi/Website
-> Lalu akses aplikasi di : `http://localhost:8000`.
+   > Lalu akses aplikasi di : `http://localhost:8000`.
 
 -----------------------------------------------------------------------------------------------------------------------
  
