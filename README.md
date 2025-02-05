@@ -71,7 +71,7 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
  
  # UI Home Page
 
- <img src="public/images/home.png" alt="Tampilan Home">
+ <img src="public/images/welcome.png" alt="Tampilan Home">
 
 
  # UI Login Page
