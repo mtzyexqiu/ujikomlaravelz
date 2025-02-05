@@ -71,27 +71,27 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
  
  # UI Home Page
 
- <img src="public/images/home.png" alt="Tampilan Home" width="300">
+ <img src="public/images/home.png" alt="Tampilan Home">
 
 
  # UI Login Page
 
- <img src="public/images/login.png" alt="Tampilan Login" width="300">
+ <img src="public/images/login.png" alt="Tampilan Login">
 
 
 # UI Register Page
 
- <img src="public/images/register.png" alt="Tampilan Register" width="300">
+ <img src="public/images/register.png" alt="Tampilan Register">
 
 
  # UI Dashboard Admin Page
 
- <img src="public/images/dashboardadmin.png" alt="Tampilan Dashboard Admin" width="300">
+ <img src="public/images/dashboardadmin.png" alt="Tampilan Dashboard Admin">
  
 
   # UI Dashboard Admin User
 
- <img src="public/images/dashboarduser.png" alt="Tampilan Dashboard User" width="300">
+ <img src="public/images/dashboarduser.png" alt="Tampilan Dashboard User">
 
 
 
