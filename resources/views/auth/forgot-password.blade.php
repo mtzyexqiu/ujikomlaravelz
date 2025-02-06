@@ -3,8 +3,13 @@
         {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
     </div>
 
+    <!-- Favicon (Logo) -->
+    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
+
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
+
+    @section('title', 'Forgot Password')
 
     <form method="POST" action="{{ route('password.email') }}">
         @csrf

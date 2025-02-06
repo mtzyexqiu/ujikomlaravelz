@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon (Logo) -->
+    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
+
     <style>
         .btn-animate {
             transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
