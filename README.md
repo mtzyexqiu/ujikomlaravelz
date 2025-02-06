@@ -98,11 +98,11 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
 
   # UI Daftar Pengguna
 
- <img src="public/images/my.png" alt="Tampilan Halaman Profile">
+ <img src="public/images/myy.png" alt="Tampilan Halaman Profile">
 
   # UI Daftar Pengguna
 
- <img src="public/images/editprofil.png" alt="Tampilan Edit Profile">
+ <img src="public/images/editedit.png" alt="Tampilan Edit Profile">
 
  # UI Daftar Pengguna
 
