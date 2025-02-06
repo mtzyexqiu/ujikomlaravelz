@@ -109,13 +109,13 @@ class TiketController extends Controller
 
     $tikets = $query->get();
 
-    // Menggunakan Tipe Pengguna yang sedang di pake
+    // Fungsi berjalan menggunakan tipe pengguna saat ini
     $usertype = Auth::user()->usertype;
 
-    // Rute khusus berdasarkan usertype pengguna
+    // rute khusus pengguna yang memiliki usertype admin
     if ($usertype == 'admin') {
-        return view('admin/tiket/home', compact('tikets'));
-    } elseif ($usertype == 'user') {
+        return view('admin.tiket.home', compact('tikets'));
+    } else {
         return view('dashboard', compact('tikets'));
     }
 
