@@ -1,4 +1,6 @@
 <x-app-layout>
+    @section('title', 'Edit Profile')
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Edit My Profile') }}
@@ -14,7 +16,7 @@
                         @method('PUT')
 
                         <div class="mb-4">
-                            <label for="name" class="block text-gray-700 dark:text-gray-300 font-semibold">User Name</label>
+                            <label for="name" class="block text-gray-700 dark:text-gray-300 font-semibold">UserName</label>
                             <input id="name" name="name" type="text" value="{{ old('name', $user->name) }}" required
                                 class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:text-white" />
                         </div>

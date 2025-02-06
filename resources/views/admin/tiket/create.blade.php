@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Create Reporting')
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -96,14 +97,12 @@
         }
 
         button {
-
             background-color: #157BFF;
         }
 
         button:hover {
-            transition:  0.3s ease;
-            background-color: #6aaaff
-
+            transition: 0.3s ease;
+            background-color: #6aaaff;
         }
     </style>
 </x-app-layout>
