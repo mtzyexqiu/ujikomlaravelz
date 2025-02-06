@@ -113,10 +113,12 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
 ## Account Access ( USER & ADMIN ) :
 - ADMIN :
 > Email Account : admin@gmail.com
+-----------------------------------------------------------------------------------------------------------------------
 > Password      : bukasandi
 
 - USER :
 > Email Account : user@gmail.com
+-----------------------------------------------------------------------------------------------------------------------
 > Password      : bukasandi
 
 -----------------------------------------------------------------------------------------------------------------------
