@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tiket;
+use Illuminate\Support\Facades\Auth;
 
 
 class TiketController extends Controller
@@ -108,7 +109,19 @@ class TiketController extends Controller
 
     $tikets = $query->get();
 
+    // Menggunakan Tipe Pengguna yang sedang di pake
+    $usertype = Auth::user()->usertype;
+
+    // Rute khusus berdasarkan usertype pengguna
+    if ($usertype == 'admin') {
+        return view('admin/tiket/home', compact('tikets'));
+    } elseif ($usertype == 'user') {
+        return view('dashboard', compact('tikets'));
+    }
+
+    // rute khusus untuk user
     return view('dashboard', compact('tikets'));
 }
+
 
 }
