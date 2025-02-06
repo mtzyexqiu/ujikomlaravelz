@@ -96,9 +96,38 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
 
  <img src="public/images/dashboarduser.png" alt="Tampilan Dashboard User">
 
+  # UI Daftar Pengguna
+
+ <img src="public/images/my.png" alt="Tampilan Halaman Profile">
+
+  # UI Daftar Pengguna
+
+ <img src="public/images/editprofil.png" alt="Tampilan Edit Profile">
+
  # UI Daftar Pengguna
 
  <img src="public/images/list.png" alt="Tampilan Daftar Pengguna">
+
+-----------------------------------------------------------------------------------------------------------------------
+
+## Account Access ( USER & ADMIN ) :
+- ADMIN :
+> Email Account : admin@gmail.com
+> Password      : bukasandi
+
+- USER :
+> Email Account : user@gmail.com
+> Password      : bukasandi
+
+-----------------------------------------------------------------------------------------------------------------------
+
+### Follow Us
+- **Instagram** : https://www.instagram.com/yexqiuu/
+- **Youtube**   : https://www.youtube.com/@matiuzzuitam9089
+
+
+
+
 
 
 
