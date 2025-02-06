@@ -17,22 +17,32 @@
                             style="background-color: #007bff; border-color: #007bff; padding: 10px 20px; font-size: 1rem; border-radius: 10px; font-family: 'Poppins', sans-serif;">Create
                             Reporting</a>
 
-                            <form action="{{ route('tiket.search') }}" method="GET">
-                                <!-- Group Name Field -->
-                                <label for="group_name" style="font-weight: bold; font-family: 'Poppins', sans-serif;"></label>
-                                <input type="text" id="group_name" name="group_name" value="{{ request('group_name') }}"
-                                    style="padding: 10px; width: 250px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
-                                    placeholder="Enter group name...">
-
-                                <!-- Category ID Field -->
-                                <label for="category_id" style="font-weight: bold; font-family: 'Poppins', sans-serif; margin-left: 10px;"></label>
-                                <input type="number" id="category_id" name="category_id" value="{{ request('category_id') }}"
-                                    style="padding: 10px; width: 200px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
-                                    placeholder="Enter category ID...">
+                        <a href="{{ route('admin.users') }}" class="btn btn-primary text-white"
+                            style="background-color: #007bff; border-color: #007bff; padding: 10px 20px; font-size: 1rem; border-radius: 10px; font-family: 'Poppins', sans-serif; display: inline-block; margin-left: -28%;">
+                            User List
+                        </a>
 
 
-                                <button type="submit"
-                                    style="
+
+                        <form action="{{ route('tiket.search') }}" method="GET">
+                            <!-- Group Name Field -->
+                            <label for="group_name"
+                                style="font-weight: bold; font-family: 'Poppins', sans-serif;"></label>
+                            <input type="text" id="group_name" name="group_name" value="{{ request('group_name') }}"
+                                style="padding: 10px; width: 250px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
+                                placeholder="Enter group name...">
+
+                            <!-- Category ID Field -->
+                            <label for="category_id"
+                                style="font-weight: bold; font-family: 'Poppins', sans-serif; margin-left: 10px;"></label>
+                            <input type="number" id="category_id" name="category_id"
+                                value="{{ request('category_id') }}"
+                                style="padding: 10px; width: 200px; border: 2px solid #157BFF; border-radius: 10px; font-family: 'Poppins', sans-serif;"
+                                placeholder="Enter category ID...">
+
+
+                            <button type="submit"
+                                style="
                                         background-color: #007bff;
                                         color: white;
                                         padding: 10px 20px;
@@ -42,11 +52,11 @@
                                         cursor: pointer;
                                         font-family: 'Poppins', sans-serif;
                                         transition: background-color 0.3s ease;"
-                                    onmouseover="this.style.backgroundColor='#0056b3';"
-                                    onmouseout="this.style.backgroundColor='#157BFF';">
-                                    Find
-                                </button>
-                            </form>
+                                onmouseover="this.style.backgroundColor='#0056b3';"
+                                onmouseout="this.style.backgroundColor='#157BFF';">
+                                Find
+                            </button>
+                        </form>
                     </div>
 
                     <div class="table-responsive">
@@ -63,49 +73,49 @@
                                     results found</p>
                             </div>
                         @else
-                        <table class="table table-hover table-bordered text-sm custom-table">
-                            <thead style="background-color: #007bff; color: white;">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Group Name</th>
-                                    <th>Category</th>
-                                    <th>Status</th>
-                                    <th>Details</th>
-                                    <th>Handled_By</th>
-                                    <th>Sender</th>
-                                    <th>Created_At</th>
-                                    <th>Updated_At</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse ($tikets as $tiket)
+                            <table class="table table-hover table-bordered text-sm custom-table">
+                                <thead style="background-color: #007bff; color: white;">
                                     <tr>
-                                        <td class="align-middle">{{ $loop->iteration }}</td>
-                                        <td class="align-middle">{{ $tiket->group_name }}</td>
-                                        <td class="align-middle">{{ $tiket->category->category_name ?? '-' }}</td>
-                                        <td class="align-middle">{{ $tiket->status }}</td>
-                                        <td class="align-middle">{{ $tiket->details }}</td>
-                                        <td class="align-middle">{{ $tiket->handledBy->name ?? '-' }}</td>
-                                        <td class="align-middle">{{ $tiket->sender }}</td>
-                                        <td class="align-middle">{{ $tiket->created_at }}</td>
-                                        <td class="align-middle">{{ $tiket->updated_at }}</td>
-                                        <td class="align-middle">
-                                            <div class="btn-group" role="group" aria-label="Basic example">
-                                                <a href="{{ route('admin/tikets/edit', ['id' => $tiket->id]) }}"
-                                                    type="button" class="btn btn-secondary">Edit</a>
-                                                <a href="{{ route('admin/tikets/delete', ['id' => $tiket->id]) }}"
-                                                    type="button" class="btn btn-danger">Delete</a>
-                                            </div>
-                                        </td>
+                                        <th>ID</th>
+                                        <th>Group Name</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Details</th>
+                                        <th>Handled_By</th>
+                                        <th>Sender</th>
+                                        <th>Created_At</th>
+                                        <th>Updated_At</th>
+                                        <th>Action</th>
                                     </tr>
-                                @empty
-                                    <tr>
-                                        <td colspan="10" class="text-center">Data not found</td>
-                                    </tr>
-                                @endforelse
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @forelse ($tikets as $tiket)
+                                        <tr>
+                                            <td class="align-middle">{{ $loop->iteration }}</td>
+                                            <td class="align-middle">{{ $tiket->group_name }}</td>
+                                            <td class="align-middle">{{ $tiket->category->category_name ?? '-' }}</td>
+                                            <td class="align-middle">{{ $tiket->status }}</td>
+                                            <td class="align-middle">{{ $tiket->details }}</td>
+                                            <td class="align-middle">{{ $tiket->handledBy->name ?? '-' }}</td>
+                                            <td class="align-middle">{{ $tiket->sender }}</td>
+                                            <td class="align-middle">{{ $tiket->created_at }}</td>
+                                            <td class="align-middle">{{ $tiket->updated_at }}</td>
+                                            <td class="align-middle">
+                                                <div class="btn-group" role="group" aria-label="Basic example">
+                                                    <a href="{{ route('admin/tikets/edit', ['id' => $tiket->id]) }}"
+                                                        type="button" class="btn btn-secondary">Edit</a>
+                                                    <a href="{{ route('admin/tikets/delete', ['id' => $tiket->id]) }}"
+                                                        type="button" class="btn btn-danger">Delete</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="10" class="text-center">Data not found</td>
+                                        </tr>
+                                    @endforelse
+                                </tbody>
+                            </table>
                         @endif
                     </div>
 

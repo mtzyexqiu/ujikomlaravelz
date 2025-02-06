@@ -10,6 +10,7 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
 - Menu profil ( Biodata, unggah Foto, ubah Foto, ubah Kata Sandi).
 - Logout.
 - Fitur pencarian data berdasarkan Group Name dan Category ID
+- Khusus untuk Admin, dapat melihat daftar Pengguna berdasarkan ( Nickname, Email, Usertype )
 
 ## Persyaratan
 - PHP >= 8.1
@@ -81,7 +82,7 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
  <img src="public/images/login.png" alt="Tampilan Login">
 
 
-# UI Register Page
+ # UI Register Page
 
  <img src="public/images/register.png" alt="Tampilan Register">
 
@@ -91,9 +92,13 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
  <img src="public/images/dashboardadmin.png" alt="Tampilan Dashboard Admin">
  
 
-  # UI Dashboard Admin User
+ # UI Dashboard Admin User
 
  <img src="public/images/dashboarduser.png" alt="Tampilan Dashboard User">
+
+ # UI Daftar Pengguna
+
+ <img src="public/images/list.png" alt="Tampilan Daftar Pengguna">
 
 
 

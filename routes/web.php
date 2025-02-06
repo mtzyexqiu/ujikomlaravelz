@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TiketController;
 use App\Models\Tiket;
 use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,6 +47,9 @@ Route::middleware(['auth'])->get('/user-profile', [UserProfileController::class,
 Route::get('/tiket/search', [TiketController::class, 'search'])->name('tiket.search');
 
 route::get('admin/dashboard', [HomeController::class, 'index'])->middleware(['auth', 'admin']);
+
+Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users')->middleware('auth');
+
 
 
 require __DIR__ . '/auth.php';
