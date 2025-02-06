@@ -50,6 +50,19 @@
                     </div>
 
                     <div class="table-responsive">
+                        @if ($tikets->isEmpty())
+                            <div
+                                style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 450px;">
+                                <creattie-embed
+                                    src="https://d1jj76g3lut4fe.cloudfront.net/saved_colors/112755/1NILSercLqMK5rk0.json"
+                                    delay="1" speed="100" frame_rate="24" trigger="loop"
+                                    style="width:350px;background-color: ">
+                                </creattie-embed>
+                                <script src="https://creattie.com/js/embed.js?id=3f6954fde297cd31b441" defer></script>
+                                <p style="font-family: 'Poppins', sans-serif; font-size: 18px; color: #666;">Ups!... no
+                                    results found</p>
+                            </div>
+                        @else
                         <table class="table table-hover table-bordered text-sm custom-table">
                             <thead style="background-color: #007bff; color: white;">
                                 <tr>
@@ -93,6 +106,7 @@
                                 @endforelse
                             </tbody>
                         </table>
+                        @endif
                     </div>
 
                 </div>
