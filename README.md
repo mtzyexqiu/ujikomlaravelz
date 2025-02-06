@@ -9,7 +9,7 @@ Ini adalah project ujikom berbasis Laravel yang mencakup berbagai fitur seperti 
 - Sistem tiket dengan fitur Read, Update, dan Delete tiket.
 - Menu profil ( Biodata, unggah Foto, ubah Foto, ubah Kata Sandi).
 - Logout.
-- Fitur pencarian data berdasarkan Group Name.
+- Fitur pencarian data berdasarkan Group Name dan Category ID
 
 ## Persyaratan
 - PHP >= 8.1
